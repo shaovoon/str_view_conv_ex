@@ -42,6 +42,6 @@ int main(int argc, char *argv [])
 }
 ```
 
-[String to Integer Benchmark](https://github.com/shaovoon/intbench)
-
-[String to Float Benchmark](https://github.com/shaovoon/floatbench)
+**Related Boost Spirit Qi Benchmarks**
+* [String to Integer Benchmark](https://github.com/shaovoon/intbench)
+* [String to Float Benchmark](https://github.com/shaovoon/floatbench)
