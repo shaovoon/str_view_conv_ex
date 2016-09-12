@@ -1,5 +1,7 @@
 # C++17 string_view to integer/float example
 
+**Note:** using boost::spirit::qi to do the job. (Spirit v2)
+
 **Note:** using boost::string_ref instead
 
 ```cpp
