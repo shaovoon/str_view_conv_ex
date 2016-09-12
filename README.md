@@ -2,7 +2,7 @@
 
 **Note:** using boost::spirit::qi to do the job. (Spirit v2)
 
-**Note:** using boost::string_ref instead
+**Note:** using boost::string_ref until string_view is available
 
 ```cpp
 #include <iostream>
@@ -41,3 +41,6 @@ int main(int argc, char *argv [])
     return 0;
 }
 ```
+
+[String to Integer Benchmark](https://github.com/shaovoon/intbench)
+[String to Float Benchmark](https://github.com/shaovoon/floatbench)
