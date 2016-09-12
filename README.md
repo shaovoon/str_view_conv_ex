@@ -1,6 +1,6 @@
-C++17 string_view to integer/float example
+# C++17 string_view to integer/float example
 
-Note: using boost::string_ref instead
+**Note:** using boost::string_ref instead
 
 ```cpp
 #include <iostream>
