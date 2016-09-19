@@ -1,4 +1,8 @@
 // str_to_value.h
+// C++ String to Integral Types
+// Author: Wong Shao Voon
+// Copyright 2016
+// No warranty implied or expressed.
 
 #pragma once
 
@@ -36,7 +40,6 @@ inline bool str_to_value(const string_type& src, unsigned long long& dest)
 	return qi::parse(std::cbegin(src), std::cend(src), qi::ulong_long, dest);
 }
 
-
 template<typename string_type>
 inline bool str_to_value(const string_type& src, long& dest)
 {
@@ -52,7 +55,6 @@ inline bool str_to_value(const string_type& src, unsigned long& dest)
 
 	return qi::parse(std::cbegin(src), std::cend(src), qi::ulong_, dest);
 }
-
 
 template<typename string_type>
 inline bool str_to_value(const string_type& src, int& dest)
