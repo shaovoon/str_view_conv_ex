@@ -4,9 +4,13 @@
 // Copyright 2016
 // No warranty implied or expressed.
 
+// version 1.0.0  : 1st commit
+// version 1.0.1  : Use fixed width integer
+
 #pragma once
 
 #include <boost/spirit/include/qi.hpp>
+#include <cstdint>
 
 template<typename string_type>
 inline bool str_to_value(const string_type& src, double& dest)
@@ -25,7 +29,7 @@ inline bool str_to_value(const string_type& src, float& dest)
 }
 
 template<typename string_type>
-inline bool str_to_value(const string_type& src, long long& dest)
+inline bool str_to_value(const string_type& src, std::int64_t& dest)
 {
 	namespace qi = boost::spirit::qi;
 
@@ -33,7 +37,7 @@ inline bool str_to_value(const string_type& src, long long& dest)
 }
 
 template<typename string_type>
-inline bool str_to_value(const string_type& src, unsigned long long& dest)
+inline bool str_to_value(const string_type& src, std::uint64_t& dest)
 {
 	namespace qi = boost::spirit::qi;
 
@@ -41,23 +45,7 @@ inline bool str_to_value(const string_type& src, unsigned long long& dest)
 }
 
 template<typename string_type>
-inline bool str_to_value(const string_type& src, long& dest)
-{
-	namespace qi = boost::spirit::qi;
-
-	return qi::parse(std::cbegin(src), std::cend(src), qi::long_, dest);
-}
-
-template<typename string_type>
-inline bool str_to_value(const string_type& src, unsigned long& dest)
-{
-	namespace qi = boost::spirit::qi;
-
-	return qi::parse(std::cbegin(src), std::cend(src), qi::ulong_, dest);
-}
-
-template<typename string_type>
-inline bool str_to_value(const string_type& src, int& dest)
+inline bool str_to_value(const string_type& src, std::int32_t& dest)
 {
 	namespace qi = boost::spirit::qi;
 
@@ -65,7 +53,7 @@ inline bool str_to_value(const string_type& src, int& dest)
 }
 
 template<typename string_type>
-inline bool str_to_value(const string_type& src, unsigned int& dest)
+inline bool str_to_value(const string_type& src, std::uint32_t& dest)
 {
 	namespace qi = boost::spirit::qi;
 
@@ -73,7 +61,7 @@ inline bool str_to_value(const string_type& src, unsigned int& dest)
 }
 
 template<typename string_type>
-inline bool str_to_value(const string_type& src, short& dest)
+inline bool str_to_value(const string_type& src, std::int16_t& dest)
 {
 	namespace qi = boost::spirit::qi;
 
@@ -81,7 +69,7 @@ inline bool str_to_value(const string_type& src, short& dest)
 }
 
 template<typename string_type>
-inline bool str_to_value(const string_type& src, unsigned short& dest)
+inline bool str_to_value(const string_type& src, std::uint16_t& dest)
 {
 	namespace qi = boost::spirit::qi;
 
